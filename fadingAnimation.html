@@ -1,0 +1,33 @@
+<style>
+
+    #ball {
+      width: 70px;
+      height: 70px;
+      margin: 50px auto;
+      position: fixed;
+      left: 20%;
+      border-radius: 50%;
+      background: linear-gradient(
+        35deg,
+        #ccffff,
+        #ffcccc
+      );
+      background: linear-gradient(
+310deg
+/* ,#7928ca,#ff0080); */
+      animation-name: fade;
+      animation-duration: 10s;
+      animation-iteration-count:4;
+    }
+  
+    @keyframes fade {
+      50% {
+        left: 60%;
+        opacity:0.1;
+  
+      }
+    }
+  
+  </style>
+  
+  <div id="ball"></div>

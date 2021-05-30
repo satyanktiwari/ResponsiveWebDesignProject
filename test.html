@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<style>
+  body{
+    background-color:black;
+  }
+  h1{
+    color:red;
+    text-align: middle;
+    margin-left: 500px;
+    font-style: oblique;
+    text-decoration-color: aquamarine;
+    text-decoration: double;
+    font-weight: 800;
+    background: -webkit-linear-gradient( #A52A2A,#FFBF00,#F0002F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 60px;
+  }
+  .heart {
+    /* position: float; */
+    display: block;
+    margin-top:125px;
+    /* margin-right: ; */
+    margin-left: auto;
+    /* background-color: black; */
+    height: 300px;
+    width: 300px;
+    /* padding:10em; */
+    transform:rotate(-45deg) ;
+    /* background: linear-gradient(90deg, rgb(255,10,0), rgb(233, 183, 18), rgb(233, 183, 18)); */
+    background: linear-gradient(90deg, rgb(255,10,0), rgb(134, 68, 76), rgb(233, 183, 18));
+    z-index: 1;
+    animation-name:testanimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-name: beat;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+  .heart::after {
+    background-color: red;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 0px;
+    left: 150px;
+    background: linear-gradient(45deg, rgb(255,30,0), rgb(134, 76, 76), rgb(233, 183, 18));
+    
+  }
+  .heart::before {
+    content:"";
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: -150px;
+    left: 0px;
+    background: linear-gradient(45deg, rgb(255,10,0), rgb(134, 68, 76), rgb(233, 183, 18));
+    
+  }
+  
+  #left{
+    float:left;
+    width: 50%;
+  }
+  #right{
+    float:right;
+    width: 50%;
+  }
+  /* p{
+    font-style: oblique;
+    font-weight: 800;
+    font-variant-position: initial;
+    color:burlywood;
+    transform: scale(2);
+    font-size: 3em;
+    text-decoration: dotted;
+    text-rendering: geometricPrecision;
+    text-shadow: aqua;         
+  } */
+  div:hover{
+    /* color:black; */
+    background: linear-gradient(90deg, rgb(255,10,0), rgb(134, 68, 76), rgb(233, 183, 18));
+    z-index: 1;
+  }
+  /* #textRight{
+    float:right;
+    margin-top: 170px;
+    width: 39.5%;
+  } */
+  h4{
+    float:right;
+    margin-top: 170px;
+    width: 40.75%;
+    font-style: oblique;
+    font-weight: 800;
+    font-variant-position: initial;
+    color:burlywood;
+    transform: scale(2);
+    font-size: 3em;
+    text-decoration: dotted;
+    text-rendering: geometricPrecision;
+    text-shadow: aqua;
+    background: -webkit-linear-gradient( #A52A2A,#FFBF00,#F0002F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name:  textSize;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes testanimation{
+    0%{
+      background: linear-gradient(90deg, rgb(255,10,0), rgb(134, 68, 76), rgb(233, 183, 18));
+    }
+
+    50%{
+      background: linear-gradient(90deg, rgb(233, 183, 18), rgb(134, 68, 76), rgb(255,10,0));
+    }
+    100%{
+      background: linear-gradient(90deg, rgb(255,10,0), rgb(134, 68, 76), rgb(233, 183, 18));
+    }
+  }
+
+  @keyframes beat{
+    0%{
+      transform:scale(1) rotate(-45deg);;
+    }
+    50%{
+      transform:scale(0.8) rotate(-45deg);
+    }
+  }
+
+  @keyframes textSize{
+    0%{
+      background: -webkit-linear-gradient( #A52A2A,#FFBF00,#F0002F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+    45%{
+      /* transform: scale(0.9.9); */
+    }
+    50%{
+      background:transparent;
+    }
+    100%{
+      background:transparent;
+    }
+  }
+</style>
+<title>MyTestHTMlPage</title>
+<body>
+  <h1>Happy Marriage Anniversay</h1>
+  <section id="left">
+    <div class="heart" id="testanimation">
+    </div>
+  </section>
+  <!-- <section id="right"><div class="heart"></div></section> -->
+  <p>
+    <span><h4>11</h4></span>
+    
+  </p>
+  
+  
+</body>
