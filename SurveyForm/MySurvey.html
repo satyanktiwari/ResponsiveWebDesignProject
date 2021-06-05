@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>
+    <!-- meta info -->
+    <title id="title">API Testing Tools Survey Form</title>
+</head>
+<body>
+    <main>
+        <header><h1>API Testing Tools Survey Form</h1>
+            <p id="description">A short survey about 
+                tools in api testing</p>
+        </header>
+       <form id="survey-form">
+           <div>
+               <label id="name-label" for="name">Name</label>
+               <input 
+               type="text"
+               id="name" 
+               name="name"                
+               placeholder="Enter your Name">
+           </div>
+           <div>
+               <label id="email-label" for="email">Email</label>
+               <input
+               type="email"
+               id="email"
+               name="email"  
+               placeholder="Enter your Email"
+               >
+           </div>
+           <div>
+               <label id="number-label" for="number">Years of Experience</label>
+               <input
+               type="number"
+               id="number"
+               name="number"
+               min=0
+               max=99
+               placeholder="Years"
+               >
+           </div>
+           <div>
+               <p>Which Api test tool / framework do you prefer?</p>
+               <select 
+               id="dropdown" 
+               name="tools"
+               >
+                    <option disabled selected value>Select api testing tool</option>
+                    <option value="Postman">Postman</option>
+                    <option value="RestAssured">Rest Assured</option>
+                    <option value="Karate">Karate</option>
+                    <option value="horsesForCourses">Depends on Project</option>
+                    <option value="preferNo">Prefer Not to Say</option>
+                    <option value="other">Other</option>
+               </select>
+           </div>
+
+       </form> 
+        
+        
+        
+        
+    </main>
+    <footer></footer>
+</body>
+</html>
