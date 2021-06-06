@@ -3,21 +3,30 @@
 <head>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-        ody {
-  font-family: 'Roboto', sans-serif;
+        
+        :root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkPurple-alpha:rgba(11, 10, 14, 0.5);
+  --color-green: #37af65;
+  --color-lightBlue: #4293ff;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+        
+        body {
+  font-family: 'Roboto',sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.4;
   color: var(--color-white);
   margin: 0;
 }
-        
-        
-        h1 {
-            color: red;
-        }
-
-        body::before {
+   
+   body::before {
   content: '';
   position: fixed;
   top: 0;
@@ -27,9 +36,9 @@
   z-index: -1;
   background: var(--color-darkblue);
   background-image: linear-gradient(
-      115deg,
-      rgba(58, 58, 158, 0.8),
-      rgba(136, 136, 206, 0.7)
+      5deg,
+      rgba(245, 189, 31, 0.9),
+      rgba(200, 0, 0, 0.9)
     ),
     url(
         https://upload.wikimedia.org/wikipedia/commons/1/10/HTTP_logo_-_2014.svg
@@ -38,16 +47,142 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+         
+h1 {
+            color: var(--color-white);
+            font-weight: 400;
+            line-height: 1.2;
+        } 
     
+   p {
+       font-size: 1.125rem;
+   } 
     
+   h1,
+    p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: initial;
+    line-height: inherit;
+    margin: 0;
+}
+
+button {
+    border: none;
+}
+
+.container {
+    width: 100%;
+    margin: 3.125rem auto 0 auto;
+}
+
+@media (min-width: 57.6rem){
+    .container{
+        max-width: 35.6rem;
+    }
+}
     
+    @media (min-width:76.8rem) {
+        .container{
+            max-width:55rem;
+        }
+    }
     
+    .header {
+        padding: 0 0.625rem;
+        margin-bottom: 1.875rem;
+    }
+
+    .description {
+        font-style:italic;
+        font-weight: 200;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    }
+
+.text-center {
+    text-align: center;
+}
+
+form {
+  background: var(--color-darkPurple-alpha);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.25rem;
+}
     
-    
-    </style>
-    
-    
-    
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+  }
+}
+
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #76b1ff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(66, 147, 255, 0.50);
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-flex;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.input-number {
+        min-width:10rem;
+    }
+
+.input-textarea {
+  min-height: 12rem;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  /* background: var(--color-green); */
+  background: #190e00;
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+}
+    </style>    
     
     
     <!-- meta info -->
@@ -60,53 +195,59 @@ IETF HTTP Working Group (HTTPbis), Public domain, via Wikimedia Commons
  -->
 <body>
     <main>
-        <header>
+        <div class="container">
+        <header class="header text-center">
             <h1 id="title">
                 API Testing Tools - Survey Form
             </h1>
-            <p id="description">
-                A short survey about 
+            <p id="description" class="description text-center" >
+                Please help us in understanding about 
                 tools in api testing
             </p>
         </header>
        <form id="survey-form">
-           <div>
+           <div class="form-group">
                <label id="name-label" for="name">Name</label>
                <input 
                type="text"
                id="name" 
-               name="name"                
+               name="name"  
+               class="form-control"              
                placeholder="Enter your Name"
                required
                >
            </div>
-           <div>
+           <div class="form-group">
                <label id="email-label" for="email">Email</label>
                <input
                type="email"
                id="email"
                name="email"  
+               class="form-control"
                placeholder="Enter your Email"
                required
                >
            </div>
-           <div>
-              <label id="number-label" for="number">Years of Experience</label>
+           <div class="form-group">
+              <label id="number-label" for="number">Years of Experience with Api Testing</label>
                <input
                type="number"
                id="number"
                name="number"
                min=0
-               max=99
+               max=50
+               class ="form-control"
                placeholder="Years"
+               class="input-number"
                >
            </div>
 
-           <div>
+           <div class="form-group">
                <p>Which Api test tool / framework do you prefer?</p>
                <select 
                id="dropdown" 
                name="tools"
+               class="form-control"
                >
                     <option disabled selected value>Select api testing tool</option>
                     <option value="Postman">Postman</option>
@@ -118,7 +259,7 @@ IETF HTTP Working Group (HTTPbis), Public domain, via Wikimedia Commons
                </select>
            </div>
            
-           <div>
+           <div class="form-group">
                <p>Would you like to try above tools?</p>
                <label for="yes">
                    <input
@@ -126,6 +267,7 @@ IETF HTTP Working Group (HTTPbis), Public domain, via Wikimedia Commons
                    id="yes"
                    value="yes"
                    type="radio"
+                   class="input-radio"
                    checked
                    >Yes
                </label>
@@ -135,6 +277,7 @@ IETF HTTP Working Group (HTTPbis), Public domain, via Wikimedia Commons
                    id="no"
                    value="no"
                    type="radio"
+                   class="input-radio"
                    >No
                </label>
                <label for="noOther">
@@ -143,10 +286,11 @@ IETF HTTP Working Group (HTTPbis), Public domain, via Wikimedia Commons
                    id="noOther"
                    value="noOther"
                    type="radio"
+                   class="input-radio"
                    >No - for the tool listed
                </label>
            </div>
-           <div>
+           <div class="form-group">
                <p>Select all that apply when you test</p>
                <label for="code">
                    <input
@@ -154,6 +298,7 @@ IETF HTTP Working Group (HTTPbis), Public domain, via Wikimedia Commons
                    value="code"
                    name="code"
                    type="checkbox"
+                   class="input-checkbox"
                    >Validate response code
                </label>
                <label for="responseJson">
@@ -162,6 +307,7 @@ IETF HTTP Working Group (HTTPbis), Public domain, via Wikimedia Commons
                 value="responseJson" 
                 name="responseJson"
                 type="checkbox"
+                class="input-checkbox"
                 >Validate json response
             </label>
             <label for="responseXml">
@@ -170,6 +316,7 @@ IETF HTTP Working Group (HTTPbis), Public domain, via Wikimedia Commons
                 value="responseXml"
                 name="responseXml"
                 type="checkbox"
+                class="input-checkbox"
                 >Validate xml response
             </label>
             <label for="fuzzy">
@@ -178,6 +325,7 @@ IETF HTTP Working Group (HTTPbis), Public domain, via Wikimedia Commons
                 value="fuzzy"
                 name="fuzzy"
                 type="checkbox"
+                class="input-checkbox"
                 >Assert using fuzzy matching
             </label>
             <label for="performance">
@@ -186,6 +334,7 @@ IETF HTTP Working Group (HTTPbis), Public domain, via Wikimedia Commons
                 value="performance"
                 name="performance"
                 type="checkbox"
+                class="input-checkbox"
                 >Performance test API's 
             </label>
             <label for="uiTesting">
@@ -194,26 +343,30 @@ IETF HTTP Working Group (HTTPbis), Public domain, via Wikimedia Commons
                 value="uiTesting"
                 name="uiTesting"
                 type="checkbox"
+                class="input-checkbox"
                 >My API test tool can also be used for testing UI 
             </label>
            </div>
           
-           <div>
+           <div class="form-group">
                <p>Any comments or suggestions?</p>
                <textarea
                id="comments"
                name="comments"
                placeholder="Enter your comments here"
+               class="input-textarea form-control"
                ></textarea>
            </div>
           
-           <div>
+           <div class="form-group">
                <button
                id="submit"
                name="button-submit"
+               class="submit-button"
                >Submit</button>
            </div>           
-       </form>       
+       </form> 
+    </div>      
     </main>
     <footer></footer>
 </body>
