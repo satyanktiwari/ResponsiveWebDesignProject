@@ -1,19 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        ody {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0;
+}
+        
+        
         h1 {
             color: red;
         }
+
+        body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url(
+        https://upload.wikimedia.org/wikipedia/commons/1/10/HTTP_logo_-_2014.svg
+        );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+    
+    
+    
+    
+    
+    
     </style>
+    
+    
+    
+    
+    
     <!-- meta info -->
-    <title id="title">API Testing Tools Survey Form</title>
+    <title>API Testing Tools - Survey Form</title>
 </head>
+<!-- 
+    fileurl:
+    https://upload.wikimedia.org/wikipedia/commons/1/10/HTTP_logo_-_2014.svg
+IETF HTTP Working Group (HTTPbis), Public domain, via Wikimedia Commons
+ -->
 <body>
     <main>
-        <header><h1>API Testing Tools Survey Form</h1>
-            <p id="description">A short survey about 
-                tools in api testing</p>
+        <header>
+            <h1 id="title">
+                API Testing Tools - Survey Form
+            </h1>
+            <p id="description">
+                A short survey about 
+                tools in api testing
+            </p>
         </header>
        <form id="survey-form">
            <div>
@@ -22,7 +76,9 @@
                type="text"
                id="name" 
                name="name"                
-               placeholder="Enter your Name">
+               placeholder="Enter your Name"
+               required
+               >
            </div>
            <div>
                <label id="email-label" for="email">Email</label>
@@ -31,10 +87,11 @@
                id="email"
                name="email"  
                placeholder="Enter your Email"
+               required
                >
            </div>
            <div>
-               <label id="number-label" for="number">Years of Experience</label>
+              <label id="number-label" for="number">Years of Experience</label>
                <input
                type="number"
                id="number"
@@ -44,6 +101,7 @@
                placeholder="Years"
                >
            </div>
+
            <div>
                <p>Which Api test tool / framework do you prefer?</p>
                <select 
@@ -59,12 +117,103 @@
                     <option value="other">Other</option>
                </select>
            </div>
-
-       </form> 
-        
-        
-        
-        
+           
+           <div>
+               <p>Would you like to try above tools?</p>
+               <label for="yes">
+                   <input
+                   name="user-feedback"
+                   id="yes"
+                   value="yes"
+                   type="radio"
+                   checked
+                   >Yes
+               </label>
+               <label for="no">
+                   <input
+                   name="user-feedback"
+                   id="no"
+                   value="no"
+                   type="radio"
+                   >No
+               </label>
+               <label for="noOther">
+                   <input
+                   name="user-feedback"
+                   id="noOther"
+                   value="noOther"
+                   type="radio"
+                   >No - for the tool listed
+               </label>
+           </div>
+           <div>
+               <p>Select all that apply when you test</p>
+               <label for="code">
+                   <input
+                   id="code"
+                   value="code"
+                   name="code"
+                   type="checkbox"
+                   >Validate response code
+               </label>
+               <label for="responseJson">
+                   <input
+                id="responseJson"
+                value="responseJson" 
+                name="responseJson"
+                type="checkbox"
+                >Validate json response
+            </label>
+            <label for="responseXml">
+                <input
+                id="responseXml"
+                value="responseXml"
+                name="responseXml"
+                type="checkbox"
+                >Validate xml response
+            </label>
+            <label for="fuzzy">
+                <input
+                id="fuzzy"
+                value="fuzzy"
+                name="fuzzy"
+                type="checkbox"
+                >Assert using fuzzy matching
+            </label>
+            <label for="performance">
+                <input
+                id="performance"
+                value="performance"
+                name="performance"
+                type="checkbox"
+                >Performance test API's 
+            </label>
+            <label for="uiTesting">
+                <input
+                id="uiTesting"
+                value="uiTesting"
+                name="uiTesting"
+                type="checkbox"
+                >My API test tool can also be used for testing UI 
+            </label>
+           </div>
+          
+           <div>
+               <p>Any comments or suggestions?</p>
+               <textarea
+               id="comments"
+               name="comments"
+               placeholder="Enter your comments here"
+               ></textarea>
+           </div>
+          
+           <div>
+               <button
+               id="submit"
+               name="button-submit"
+               >Submit</button>
+           </div>           
+       </form>       
     </main>
     <footer></footer>
 </body>
