@@ -8,9 +8,14 @@
   --color-white: #f3f3f3;
   --color-darkblue: #1b1b32;
   --color-darkPurple-alpha:rgba(11, 10, 14, 0.5);
-  --color-green: #37af65;
-  --color-lightBlue: #4293ff;
-}
+  --color-my-yellow:rgba(245, 189, 31, 0.9);
+  --color-my-red:rgba(200, 0, 0, 0.9);
+  --color-black-alpha:rgba(0, 0, 0, 0.5);
+  --color-grey-blue:#495057;
+  --color-light-sky-blue:#76b1ff;
+  --color-dark-sky-blue-alpha:rgba(66, 147, 255, 0.50);
+  --color-yellow-black:#190e00;
+  }
 *,
 *::before,
 *::after {
@@ -25,7 +30,11 @@
   color: var(--color-white);
   margin: 0;
 }
-   
+
+    /* fileurl:
+    https://upload.wikimedia.org/wikipedia/commons/1/10/HTTP_logo_-_2014.svg
+IETF HTTP Working Group (HTTPbis), Public domain, via Wikimedia Commons */
+
    body::before {
   content: '';
   position: fixed;
@@ -37,13 +46,13 @@
   background: var(--color-darkblue);
   background-image: linear-gradient(
       5deg,
-      rgba(245, 189, 31, 0.9),
-      rgba(200, 0, 0, 0.9)
+      var(--color-my-yellow),
+      var(--color-my-red)
     ),
     url(
         https://upload.wikimedia.org/wikipedia/commons/1/10/HTTP_logo_-_2014.svg
         );
-  background-size: cover;
+  background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -110,7 +119,7 @@ button {
     .description {
         font-style:italic;
         font-weight: 200;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        text-shadow: 1px 1px 1px var(--color-black-alpha);
     }
 
 .text-center {
@@ -139,18 +148,19 @@ form {
   width: 100%;
   height: 2.375rem;
   padding: 0.375rem 0.75rem;
-  color: #495057;
-  background-color: #fff;
+  color: var(--color-grey-blue);
+  background-color: var(--color-white);
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid var(--color-grey-blue);
   border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 500ms ease-in-out, 
+                box-shadow 0.15s ease-in-out;
 }
 
 .form-control:focus {
-  border-color: #76b1ff;
+  border-color: var(--color-light-sky-blue);
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(66, 147, 255, 0.50);
+  box-shadow: 0 0 0 0.2rem var(--color-dark-sky-blue-alpha);
 }
 
 .input-radio,
@@ -176,8 +186,7 @@ form {
   display: block;
   width: 100%;
   padding: 0.75rem;
-  /* background: var(--color-green); */
-  background: #190e00;
+  background: var(--color-yellow-black);
   color: inherit;
   border-radius: 2px;
   cursor: pointer;
@@ -188,11 +197,7 @@ form {
     <!-- meta info -->
     <title>API Testing Tools - Survey Form</title>
 </head>
-<!-- 
-    fileurl:
-    https://upload.wikimedia.org/wikipedia/commons/1/10/HTTP_logo_-_2014.svg
-IETF HTTP Working Group (HTTPbis), Public domain, via Wikimedia Commons
- -->
+
 <body>
     <main>
         <div class="container">
