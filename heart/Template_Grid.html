@@ -4,6 +4,9 @@
       --color-black:black;
       --color-goldenrod: goldenrod;
       --color-LightGray: LightGray;
+      --color-red:red;
+      --color-green:green;
+      --color-blue:blue;
    }
 
    body {
@@ -16,9 +19,14 @@
    
    .header {
     grid-area: hd;
-}
+    background: var(--color-red);
+    text-align: center;
+    padding: 20px;
+        }
 .footer {
     grid-area: ft;
+    background: var(--color-LightGray);
+    padding: 10px;
 }
 .content {
     grid-area: main;
@@ -26,15 +34,19 @@
 }
 .sidebar {
     grid-area: sd;
+    background: var(--color-green);
    
 }
  
   
     .wrapper {
+        min-height: 500px;
+        text-align: center;
         display: grid;
-        grid-auto-rows: minmax(100px, auto);
+        /* grid-auto-rows: minmax(100px, auto); */
+        grid-auto-rows: auto 2.4fr auto;
         grid-template-columns: 1fr;
-        grid-template-areas: 
+                grid-template-areas: 
         "hd"
         "main"
         "sd"
@@ -48,8 +60,8 @@
         grid-template-columns: repeat(9, 1fr);
         grid-template-areas:
           "hd hd hd hd   hd   hd   hd   hd   hd"
-          "sd sd sd main main main main main main"
-          "sd sd sd  ft  ft   ft   ft   ft   ft";
+          "sd sd main main main main main main main"
+          "sd sd ft  ft  ft   ft   ft   ft   ft";
           
     }
 }
