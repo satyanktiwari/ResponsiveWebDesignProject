@@ -132,7 +132,7 @@
             }     
             /* email form with submit button */
             
-            #form {
+            #form-section {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -142,18 +142,18 @@
                 margin-top: 50px;
             }
             
-            #form > h2 {
+            #form-section > h2 {
                 margin-bottom: 20px;
                 word-wrap: break-word;
             }
             
-            #form input[type='email'] {
+            #form-section input[type='email'] {
                 max-width: 275px;
                 width: 100%;
                 padding: 5px;
             }
             
-            #form input[type='submit'] {
+            #form-section input[type='submit'] {
                 max-width: 150px;
                 width: 100%;
                 height: 30px;
@@ -162,7 +162,7 @@
                 background-color:var(--color-button);
             }
             
-            #form input[type='submit']:hover {
+            #form-section input[type='submit']:hover {
                 background-color: var(--color-button-hover);
                 transition: background-color 1s;
             }
@@ -410,9 +410,9 @@ footer > span {
                     
                 </header>
                 <div class="container">
-                    <section id="form">
+                    <section id="form-section">
                         <h2>Know more, share your email</h2>
-                        <form id="form-email" action="https://www.freecodecamp.com/email-submit">
+                        <form id="form" action="https://www.freecodecamp.com/email-submit">
                             
                             <!-- <label id="email-label" for="email"><h2>Know more, share your email</h2></label> -->
                             <input
