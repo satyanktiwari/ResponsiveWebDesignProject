@@ -7,17 +7,18 @@
             
             /* Define colors */
             :root {
-                --color-whiteSmoke:#7da3a1;                
-                --color-darkSmoke: #34675c;
+                --color-whiteSmoke:white;                
+                --color-darkSmoke: rgb(4, 44, 4);
                 --color-yellow-black:#190e00;
                 --color-sky-blue:skyblue;
                 --color-black:black;                
-                --color-button:#c99e10;
+                --color-button:rgb(201, 198, 198);
                 --color-button-hover:#86ac41;               
                 --color-icons:#1e434c;
                 --color-beige:#133837;
                 --color-small-text:#00110e;
                 --color-contrast-darkSmoke:white;
+                --color-footer-text:rgb(224, 355, 255);
             }
             
             
@@ -37,7 +38,7 @@
                 list-style: none;
             }
             a {
-                color: var(--color-black);
+                color: var(--color-footer-text);
                 text-decoration: none;
             }
             
@@ -137,7 +138,7 @@
                 align-items: center;
                 justify-content: center;
                 text-align: center;
-                height: 200px;
+                height: 300px;
                 margin-top: 50px;
             }
             
@@ -227,7 +228,7 @@
             }
             
             #features .desc {
-                text-transform: uppercase;
+                text-transform:capitalize;
                 color:var(--color-beige);
                 display: flex;
                 flex-direction: column;
@@ -342,6 +343,28 @@
                     margin-bottom: 10px;
                 }
             }
+            footer {
+  margin-top: 30px;
+  background-color: var(--color-darkSmoke);
+  padding: 20px;
+}
+
+            footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer > ul > li {
+  padding: 0 10px;
+}
+
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: var(--color-footer-text);
+}
             
         </style>
         <title id='title'>
@@ -510,6 +533,14 @@
                         <button class="btn">Select</button>
                     </div>
                 </section>
+                <footer>
+                    <ul>
+                      <li><a href="#">Privacy</a></li>
+                      <li><a href="#">Terms</a></li>
+                      <li><a href="#">Contact</a></li>
+                    </ul>
+                    <span>Copyright 2021, PlacehorlderText StWorks</span>
+                  </footer>
             </div>
         </main>
         
