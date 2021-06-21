@@ -9,6 +9,8 @@
                 --color-background:white;
                 --color-body-text:4d4e53;
                 --color-header-text:black;
+                --color-forCode:rgb(231, 229, 229);
+                --color-nav-hover:#555;
             }
             * {
                 
@@ -84,6 +86,18 @@
                 text-decoration: none;
                 cursor: pointer;
             }
+            
+            
+            #navbar a:hover {
+                
+                background-color: var(--color-nav-hover);
+                color: var(--color-background);
+            }
+            
+            
+            
+            
+            
             #main-doc {
                 position: absolute;
                 margin-left: 310px;
@@ -108,7 +122,7 @@
                 word-break: normal;
                 word-wrap: normal;
                 line-height: 2;
-                background-color: var(--color-background);
+                background-color: var(--color-forCode);
                 padding: 15px;
                 margin: 10px;
                 border-radius: 5px;
@@ -161,106 +175,163 @@
     <body>
         <main id="main-doc">
             <nav id="navbar">
-                <header>NAV Header Text</header>
+                <header>CSS Houdini MDN</header>
                 <ul>
                     <li>
-                        <a class="nav-link" href="#header1">header1</a>
+                        <a class="nav-link" href="#CSS_Houdini">CSS Houdini</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#header2">header2</a>
+                        <a class="nav-link" href="#Advantages_of_Houdini">Advantages of Houdini</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#header3">header3</a>
+                        <a class="nav-link" href="#The_Houdini_APIs">The Houdini APIs</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#header4">header4</a>
+                        <a class="nav-link" href="#See_also">See also</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#header5">header5</a>
+                        <a class="nav-link" href="#Reference">Reference</a>
                     </li>
                     
                 </ul>
             </nav>
-            <section class="main-section">
+            <section class="main-section" id="CSS_Houdini">
                 
-                <section id="header1">
-                    <header>header1</header>
+                
+                    <header>CSS Houdini</header>
                     <p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
+                        Houdini is a set of low-level APIs that exposes parts of the CSS engine, giving developers the power to extend CSS by hooking into the styling and layout process of a browser’s rendering engine.  Houdini is a group of APIs that give developers direct access to the CSS Object Model (CSSOM), enabling developers to write code the browser can parse as CSS, thereby creating new CSS features without waiting for them to be implemented natively in browsers.
                     </p>
-                    <p>
-                        <code>
-                            
-                        </code>
-                    </p>
-                </section>
+                    
+                
                 
             </section>
             
-            <section class="main-section">
+            <section class="main-section" id="Advantages_of_Houdini">
                 
-                <section id="header2">
-                    <header>header2</header>
+                
+                    <header>Advantages of Houdini</header>
                     <p>
+                        Houdini enables faster parse times than using JavaScript style for style changes. Browsers parse the CSSOM — including layout, paint, and composite processes — before applying any style updates found in scripts. In addition, layout, paint, and composite processes are repeated for JavaScript style updates. Houdini code doesn't wait for that first rendering cycle to be complete. Rather, it is included in that first cycle — creating renderable, understandable styles. Houdini provides an object-based API for working with CSS values in JavaScript.
+                        
+                        Houdini's CSS Typed OM is a CSS Object Model with types and methods, exposing values as JavaScript objects making for more intuitive CSS manipulation than previous string based HTMLElement.style manipulations.
+                        
+                        <code>
+                            style = element.style
+                        </code>
+                        Every element and style sheet rule has a style map which is accessible via its StylePropertyMap.
+                        
+                        A feature of CSS Houdini is the Worklet. 
+                        <code>
+                            &lt;script&gt;
+                                if ('paintWorklet' in CSS) {
+                                  CSS.paintWorklet.addModule('checkerboard.js');
+                                }
+                                &lt;/script&gt;
+                        </code>
+                        With worklets, you can create modular CSS, requiring a single line of JavaScript to import configurable components: no pre-processors, post-processors or JavaScript frameworks needed.
                         
                     </p>
                     <p>
                         <code>
+                            &lt;script&gt;CSS.paintWorklet.addModule('csscomponent.js');&lt;/script&gt;
+                            
                             
                         </code>
                     </p>
-                </section>
+                    <p>
+                        This added module contains registerPaint() functions, which register completely configurable worklets.
+                        <code>
+                            registerPaint(name, class);
+                        </code>
+                        
+                        The CSS paint() function parameters include the name of the worklet, along with optional parameters. The worklet also has access to the element's custom properties: they don't need to be passed as function arguments.
+                        <code>
+                            li {
+                                background-image: paint(myComponent, stroke, 10px);
+                                --highlights: blue;
+                                --lowlights: green;
+                            }
+                        </code>
+                    </p>
+                
             </section>
             
-            <section class="main-section">
+            <section class="main-section" id="The_Houdini_APIs">
                 
-                <section id="header3">
-                    <header>header3</header>
+                
+                    <header>The Houdini APIs</header>
                     <p>
-                        
+                        Below you can find links to the main reference pages covering the APIs that fall under the Houdini umbrella, along with links to guides to help you if you need guidance in learning how to use them.
                     </p>
-                    <p>
-                        <code>
+                    <dl>
+                        <dt>
+                            <h3>CSS Parser API</h3>
+                            <p>
+                               <li>An API exposing the CSS parser more directly, for parsing arbitrary CSS-like languages into a mildly typed <br>
+                                No guide or reference has currently been written for this API.</li> 
+                            </p>
+                        </dt>
+                        <dt>
+                            <h3>CSS Properties and Values API</h3>
+                            <p>
+                                Defines an API for registering new CSS properties. Properties registered using this API are provided with a parse syntax that defines a type, inheritance behavior, and an initial value.
+                                <dd>
+                                   <li>CSS Properties and Values API reference</li> 
+                                </dd>
+                                <dd>
+                                    <li>CSS Properties and Values API guide</li>
+                                </dd>
+                            </p>
                             
-                        </code>
-                    </p>
-                </section>
+                        </dt>
+                        <dt>
+                            <h3>CSS Typed OM</h3>
+                            <p>
+                                Converting CSSOM value strings into meaningfully typed JavaScript representations and back can incur a significant performance overhead. The CSS Typed OM exposes CSS values as typed JavaScript objects to allow their performant manipulation.
+                                <dd>
+                                    <li>CSS Typed OM reference</li>
+                                </dd>
+                                <dd>
+                                    <li>CSS Typed OM guide</li>
+                                </dd>
+                            </p>
+                        </dt>
+                        <dt>
+                            <h3>CSS Layout API</h3>
+                            <p>
+                                Designed to improve the extensibility of CSS, this API enables developers to write their own layout algorithms, like masonry or line snapping. It is not yet natively available.
+                                <br>
+                                No guide or reference has currently been written for this API.
+                            </p>
+                        </dt>
+                        
+                    </dl>
+                
             </section>
             
-            <section class="main-section">
+            <section class="main-section" id="See_also">
                 
-                <section id="header4">
-                    <header>header4</header>
+                
+                    <header>See also</header>
                     <p>
-                        
+                        The <a href="https://houdini.how/">Worklet</a>  library for examples and code. <br>
+                        <a href="https://houdini.glitch.me/">Interactive introduction to Houdini</a> 
                     </p>
-                    <p>
-                        <code>
-                            
-                        </code>
-                    </p>
-                </section>
+                    
+                
             </section>
             
-            <section class="main-section">
+            <section class="main-section" id="Reference">
                 
-                <section id="header5">
-                    <header>header5</header>
+                
+                    <header>Reference</header>
                     <p>
+                       <li>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Web/Houdini" target="_blank">MDN </a></li> 
                         
                     </p>
-                    <p>
-                        <code>
-                            
-                        </code>
-                    </p>
-                </section>
+                    
+                
             </section>
             
         </main>
