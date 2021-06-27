@@ -18,20 +18,25 @@ rel="stylesheet"
 
 <style>
     :root {
-  --main-white: #f0f0f0;
-  --main-red: #be3144;
-  --main-blue: #45567d;
-  --main-gray: #303841;
-  --nav-box-shadow:rgba(0, 0, 0, 0.4);
-  --welcome-background:#000;
-  --welcome-background-image-gradient-zero:#3a3d40;
-  --welcome-background-image-gradient-hundred:#181719;
-  --project-box-shadow:rgba(0, 0, 0, 0.5);
-  --project-hover-code:#ff7f50;
-  --contactDetail-text-shadow:#1f1f1f;
-
-  
-}
+        --main-white: white;
+        --h2-text-color:#FFD966;
+        --potters-clay: #9E4624;
+        /* --main-blue: #4C6A92; */
+        --main-blue: #00011b;
+        --main-gray: #181818;
+        --nav-box-shadow:rgba(0, 0, 0, 0.4);
+        --nav-gray:#686868;
+        --nav-hover-color:#FFD966;
+        --welcome-background:#181818;
+        --welcome-background-image-gradient-zero:#181818;
+        --welcome-background-image-gradient-hundred:#686868;
+        --welcome-p-text:#FFD966;
+        --project-box-shadow:rgba(0, 0, 0, 0.5);
+        --project-hover-code:#FFD966;
+        --contactDetail-text-shadow:#1f1f1f;
+        
+        
+    }
     /* Base reset */
     * {
         margin: 0;
@@ -87,6 +92,7 @@ rel="stylesheet"
         font-family: 'Raleway', sans-serif;
         font-weight: 700;
         text-align: center;
+        color:var(--h2-text-color)
     }
     h1 {
         font-size: 6rem;
@@ -117,7 +123,7 @@ rel="stylesheet"
         top: 0;
         left: 0;
         width: 100%;
-        background: var(--main-red);
+        background: var(--potters-clay);
         box-shadow: 0 2px 0 var(--nav-box-shadow);
         z-index: 10;
     }
@@ -139,9 +145,9 @@ rel="stylesheet"
         padding: 2rem;
     }
     .nav-list a:hover {
-        background: var(--main-blue);
+        background: var(--nav-gray);
         /* added by Satyank */
-        color:var(--main-white);
+        color:var(--nav-hover-color);
     }
     /* Welcome section */
     
@@ -152,14 +158,16 @@ rel="stylesheet"
         align-items: center;
         width: 100%;
         height: 100vh;
-        background-color: var(--welcome-background);
-        background-image: linear-gradient(62deg, var(--welcome-background-image-gradient-zero) 0%, var(--welcome-background-image-gradient-hundred) 100%);
+        /* background-color: var(--welcome-background); */
+        /* background-image: linear-gradient(62deg, var(--welcome-background-image-gradient-zero) 0%, var(--welcome-background-image-gradient-hundred) 100%); */
+        /* background-image: radial-gradient(circle farthest-side at top left, #29708D, #4C6A92, #6C638C); */
+        background-image: radial-gradient(circle farthest-corner at center, rgba(24, 24, 24, 1) 10%, rgba(24, 22, 22, 1) 20%, rgba(24, 19, 19, 1) 30%, rgba(24, 17, 17, 1) 40%, rgba(24, 14, 14, 1) 50%, rgba(24, 12, 12, 1) 60%, rgba(24, 10, 10, 1) 70%, rgba(24, 7, 7, 1) 80%, rgba(24, 5, 5, 1) 90%, rgba(24, 2, 2, 1) 100%);
     }
     .welcome-section > p {
         font-size: 3rem;
         font-weight: 200;
         font-style: italic;
-        color: var(--main-red);
+        color: var(--welcome-p-text);
     }
     /* Projects section */
     
@@ -167,6 +175,7 @@ rel="stylesheet"
         text-align: center;
         padding: 10rem 2rem;
         background: var(--main-blue);
+        background: radial-gradient(circle farthest-side at left, #4C6A92, #A2AEBD, #4C9274, #4E555E, #DEDEDE, #5E5E5E);
     }
     .projects-section-header {
         max-width: 640px;
@@ -220,6 +229,7 @@ rel="stylesheet"
     .project-title {
         font-size: 2rem;
         padding: 2rem 0.5rem;
+        color:var(--h2-text-color);
     }
     
     .btn {
@@ -234,7 +244,7 @@ rel="stylesheet"
         transition: background 0.3s ease-out;
     }
     .btn-show-all:hover {
-        background: var(--main-red);
+        background: var(--potters-clay);
     }
     
     .btn-show-all:hover > i {
@@ -259,7 +269,8 @@ rel="stylesheet"
         width: 100%;
         height: 80vh;
         padding: 0 2rem;
-        background: var(--main-gray);
+        /* background: var(--main-gray); */
+        background-image: radial-gradient(circle farthest-corner at center, rgba(24, 24, 24, 1) 10%, rgba(24, 22, 22, 1) 20%, rgba(24, 19, 19, 1) 30%, rgba(24, 17, 17, 1) 40%, rgba(24, 14, 14, 1) 50%, rgba(24, 12, 12, 1) 60%, rgba(24, 10, 10, 1) 70%, rgba(24, 7, 7, 1) 80%, rgba(24, 5, 5, 1) 90%, rgba(24, 2, 2, 1) 100%);
     }
     .contact-section-header > h2 {
         font-size: 6rem;
@@ -299,8 +310,10 @@ rel="stylesheet"
         display: flex;
         justify-content: space-evenly;
         padding: 2rem;
-        background: var(--main-gray);
-        border-top: 4px solid var(--main-red);
+        /* background: var(--main-gray); */
+        background-image: radial-gradient(circle farthest-corner at center, rgba(24, 24, 24, 1) 10%, rgba(24, 22, 22, 1) 20%, rgba(24, 19, 19, 1) 30%, rgba(24, 17, 17, 1) 40%, rgba(24, 14, 14, 1) 50%, rgba(24, 12, 12, 1) 60%, rgba(24, 10, 10, 1) 70%, rgba(24, 7, 7, 1) 80%, rgba(24, 5, 5, 1) 90%, rgba(24, 2, 2, 1) 100%);
+        
+        border-top: 4px solid var(--potters-clay);
     }
     footer > p {
         margin: 2rem;
@@ -333,7 +346,7 @@ rel="stylesheet"
             </ul>
         </nav>
         <!-- Navigation end -->
-
+        
         <!-- Welcome Section start -->
         <section id="welcome-section" class="welcome-section">
             <h1>
@@ -343,29 +356,29 @@ rel="stylesheet"
             
         </section>
         <!-- Welcome section End -->
-
+        
         <!-- Project section start -->
         <section id="projects" class="projects-section">
-            <h2 class="project-tile">My initial projects</h2>
+            <h2 class="project-tile">My projects...</h2>
             <div class="projects-grid">
                 <a href="#linkToMyProject" 
-                target="_blank"
+                
                 class="project project-tile"
                 id="profile-link">
-            <img 
-            class="project-image"
-            src="https://via.placeholder.com/450" 
-            alt="project">
-            <p class="project-title">
-                <span class="code">&lt;</span>
-                Project 1
-                <span class="code">&#47;&gt;</span>
-              </p>
+                <img 
+                class="project-image"
+                src="https://via.placeholder.com/450" 
+                alt="project">
+                <p class="project-title">
+                    <span class="code">&lt;</span>
+                    Project 1
+                    <span class="code">&#47;&gt;</span>
+                </p>
             </a>
             <a href="#linkToMyProject" 
-                target="_blank"
-                class="project project-tile"
-                id="profile-link">
+            
+            class="project project-tile"
+            id="profile-link">
             <img 
             class="project-image"
             src="https://via.placeholder.com/450" 
@@ -374,127 +387,127 @@ rel="stylesheet"
                 <span class="code">&lt;</span>
                 Project 2
                 <span class="code">&#47;&gt;</span>
-              </p>
-            </a>
-            <a href="#linkToMyProject" 
-                target="_blank"
-                class="project project-tile"
-                id="profile-link">
-            <img 
-            class="project-image"
-            src="https://via.placeholder.com/450" 
-            alt="project">
-            <p class="project-title">
-                <span class="code">&lt;</span>
-                Project 3
-                <span class="code">&#47;&gt;</span>
-              </p>
-            </a>
-            <a href="#linkToMyProject" 
-                target="_blank"
-                class="project project-tile"
-                id="profile-link">
-            <img 
-            class="project-image"
-            src="https://via.placeholder.com/450" 
-            alt="project">
-            <p class="project-title">
-                <span class="code">&lt;</span>
-                Project 4
-                <span class="code">&#47;&gt;</span>
-              </p>
-            </a>
-            <a href="#linkToMyProject" 
-                target="_blank"
-                class="project project-tile"
-                id="profile-link">
-            <img 
-            class="project-image"
-            src="https://via.placeholder.com/450" 
-            alt="project">
-            <p class="project-title">
-                <span class="code">&lt;</span>
-                Project 5
-                <span class="code">&#47;&gt;</span>
-              </p>
-            </a>
-            <a href="#linkToMyProject" 
-                target="_blank"
-                class="project project-tile"
-                id="profile-link">
-            <img 
-            class="project-image"
-            src="https://via.placeholder.com/450" 
-            alt="project">
-            <p class="project-title">
-                <span class="code">&lt;</span>
-                Project 6
-                <span class="code">&#47;&gt;</span>
-              </p>
-            </a>
-            </div>
-            <a
-    href="https://codepen.io/FreeCodeCamp/"
-    class="btn btn-show-all"
-    target="_blank"
-    >Show all<i class="fas fa-chevron-right"></i
-  ></a>
-            
-        </section>
-        <!-- Project End -->
-
-
-        <!-- START CONTACT SECTION -->
+            </p>
+        </a>
+        <a href="#linkToMyProject" 
         
-        <section id="contact" class="contact-section">
-            <div class="contact-section-header">
-                <h2>Let's work together...</h2>
-                <p>How do you take your coffee?</p>
-            </div>
-            <div class="contact-links">
-                <a
-                href="https://facebook.com/freecodecamp"
-                target="_blank"
-                class="btn contact-details"
-                ><i class="fab fa-facebook-square"></i> Facebook</a
-                >
-                <a
-                id="profile-link"
-                href="https://github.com/freecodecamp"
-                target="_blank"
-                class="btn contact-details"
-                ><i class="fab fa-github"></i> GitHub</a
-                >
-                <a
-                href="https://twitter.com/freecodecamp"
-                target="_blank"
-                class="btn contact-details"
-                ><i class="fab fa-twitter"></i> Twitter</a
-                >
-                <a href="mailto:example@example.com" class="btn contact-details"
-                ><i class="fas fa-at"></i> Send a mail</a
-                >
-                <a href="tel:555-555-5555" class="btn contact-details"
-                ><i class="fas fa-mobile-alt"></i> Call me</a
-                >
-            </div>
-        </section>
-        <!-- START FOOTER SECTION -->
-
-
-    </main>
-    <footer>
-        <p>
-          **This is just a fake portfolio. All the projects and contact details given
-          are not real.
+        class="project project-tile"
+        id="profile-link">
+        <img 
+        class="project-image"
+        src="https://via.placeholder.com/450" 
+        alt="project">
+        <p class="project-title">
+            <span class="code">&lt;</span>
+            Project 3
+            <span class="code">&#47;&gt;</span>
         </p>
-        <p>
-            <!-- copy right symbol is &copy; -->
-            &copy; Created for
-            <a href="https://www.freecodecamp.com/" target="_blank"
-              >freeCodeCamp <i class="fab fa-free-code-camp"></i
+    </a>
+    <a href="#linkToMyProject" 
+    
+    class="project project-tile"
+    id="profile-link">
+    <img 
+    class="project-image"
+    src="https://via.placeholder.com/450" 
+    alt="project">
+    <p class="project-title">
+        <span class="code">&lt;</span>
+        Project 4
+        <span class="code">&#47;&gt;</span>
+    </p>
+</a>
+<a href="#linkToMyProject" 
+
+class="project project-tile"
+id="profile-link">
+<img 
+class="project-image"
+src="https://via.placeholder.com/450" 
+alt="project">
+<p class="project-title">
+    <span class="code">&lt;</span>
+    Project 5
+    <span class="code">&#47;&gt;</span>
+</p>
+</a>
+<a href="#linkToMyProject" 
+
+class="project project-tile"
+id="profile-link">
+<img 
+class="project-image"
+src="https://via.placeholder.com/450" 
+alt="project">
+<p class="project-title">
+    <span class="code">&lt;</span>
+    Project 6
+    <span class="code">&#47;&gt;</span>
+</p>
+</a>
+</div>
+<a
+href="#projects"
+class="btn btn-show-all"
+
+>Show all<i class="fas fa-chevron-right"></i
+    ></a>
+    
+</section>
+<!-- Project End -->
+
+
+<!-- START CONTACT SECTION -->
+
+<section id="contact" class="contact-section">
+    <div class="contact-section-header">
+        <h2>So what do you THINK...</h2>
+        <p>How do you take your coffee?</p>
+    </div>
+    <div class="contact-links">
+        <a
+        href="#contact"
+        
+        class="btn contact-details"
+        ><i class="fab fa-facebook-square"></i> Facebook</a
+        >
+        <a
+        id="profile-link"
+        href="#contact"
+        
+        class="btn contact-details"
+        ><i class="fab fa-github"></i> GitHub</a
+        >
+        <a
+        href="#contact"
+        
+        class="btn contact-details"
+        ><i class="fab fa-twitter"></i> Twitter</a
+        >
+        <a href="mailto:example@example.com" class="btn contact-details"
+        ><i class="fas fa-at"></i> Send a mail</a
+        >
+        <a href="tel:555-555-5555" class="btn contact-details"
+        ><i class="fas fa-mobile-alt"></i> Call me</a
+        >
+    </div>
+</section>
+<!-- START FOOTER SECTION -->
+
+
+</main>
+<footer>
+    <p>
+        **This is just a fake portfolio. All the projects and contact details given
+        are not real.
+    </p>
+    <p>
+        <!-- copy right symbol is &copy; -->
+        &copy; Created for
+        <a href="https://www.freecodecamp.com/" target="_blank"
+        >freeCodeCamp <i class="fab fa-free-code-camp"></i
             ></a>
-          </p>
-        </footer>
+        </p>
+    </footer>
 </body>
 </html>
