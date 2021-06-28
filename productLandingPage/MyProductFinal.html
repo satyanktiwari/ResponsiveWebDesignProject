@@ -344,27 +344,31 @@
                 }
             }
             footer {
-  margin-top: 30px;
-  background-color: var(--color-darkSmoke);
-  padding: 20px;
-}
-
+                margin-top: 30px;
+                background-color: var(--color-darkSmoke);
+                padding: 20px;
+            }
+            
             footer > ul {
-  display: flex;
-  justify-content: flex-end;
-}
-
-footer > ul > li {
-  padding: 0 10px;
-}
-
-footer > span {
-  margin-top: 5px;
-  display: flex;
-  justify-content: flex-end;
-  font-size: 0.9em;
-  color: var(--color-footer-text);
-}
+                display: flex;
+                justify-content: flex-start;
+            }
+            
+            footer > ul > li {
+                padding: 0 10px;
+            }
+            
+            footer > span {
+                margin-top: 5px;
+                display: flex;
+                justify-content: flex-start;
+                font-size: 0.75em;
+                color: var(--color-footer-text);
+            }
+            
+            footer > span > p {
+                color:var(--color-footer-text)
+            }
             
         </style>
         <title id='title'>
@@ -482,8 +486,7 @@ footer > span {
                                 <h2>Start blogging</h2>
                                 <p>Start blogging text lorem ipsim doler met</p>
                             </div>
-                        </div>
-                        
+                        </div>                       
                     </section>
                     
                     <section id="how-it-works">
@@ -535,15 +538,18 @@ footer > span {
                 </section>
                 <footer>
                     <ul>
-                      <li><a href="#">Privacy</a></li>
-                      <li><a href="#">Terms</a></li>
-                      <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
-                    <span>Copyright 2021, PlacehorlderText StWorks</span>
-                  </footer>
+                    <span><p>&copy Created as part of freeCodeCamp curriculum. </p>
+                        
+                        <p>** Video embeded from the freeCodeCamp channel on youtube</p>
+                    </span>
+                </footer>
             </div>
         </main>
         
     </body>
     
-    </HTML>
+</HTML>

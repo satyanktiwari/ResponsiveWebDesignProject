@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html>
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Roboto+Slab:wght@200&display=swap');
 <link
 rel="stylesheet"
 href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
 crossorigin="anonymous"
 />
-<link
-href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
-rel="stylesheet"
-/>
-<link
-href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
-rel="stylesheet"
-/>
-<!-- Google material icons link -->
+
+
 
 <style>
     :root {
@@ -35,7 +30,7 @@ rel="stylesheet"
         --welcome-background-image-gradient-hundred:#686868;
         
         --project-box-shadow:rgba(0, 0, 0, 0.5);
-       
+        
         --contactDetail-text-shadow:#1f1f1f;
         
         
@@ -84,7 +79,7 @@ rel="stylesheet"
     /* Base styles */
     
     body {
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Roboto Slab', serif;
         font-size: 1.8rem; /* 18px */
         font-weight: 400;
         line-height: 1.4;
@@ -92,7 +87,8 @@ rel="stylesheet"
     }
     h1,
     h2 {
-        font-family: 'Raleway', sans-serif;
+        /* font-family: 'Raleway', sans-serif; */
+        font-family: 'Homemade Apple', cursive;
         font-weight: 700;
         text-align: center;
         color:var(--main-yellow)
@@ -149,8 +145,8 @@ rel="stylesheet"
     }
     .nav-list a:hover {
         background:  rgba(47, 0, 1, 1) ;
-       
-
+        
+        
     }
     /* Welcome section */
     
@@ -245,6 +241,8 @@ rel="stylesheet"
     }
     .btn-show-all:hover {
         background: var(--potters-clay);
+        animation-name:icocnHover;
+        animation-duration: 5s;
     }
     
     .btn-show-all:hover > i {
@@ -299,9 +297,23 @@ rel="stylesheet"
         transition: transform 0.3s ease-out;
     }
     .contact-details:hover {
-        transform: translateY(8px);
+        transform: translateY(4px);
+        animation-name:icocnHover;
+        animation-duration: 1s;
+        
     }
     
+    @keyframes icocnHover{
+        0%{
+            color:silver;
+        }
+        50%{
+            color:#66ffcc;
+        }
+        100%{
+            color:#ffff66;
+        }
+    }
     
     /* Footer */
     
@@ -320,6 +332,9 @@ rel="stylesheet"
     }
     footer i {
         vertical-align: middle;
+    }
+    footer a:hover {
+        color: var(--main-yellow);
     }
     @media (max-width: 28.75em) {
         footer {
@@ -498,8 +513,7 @@ class="btn btn-show-all"
 </main>
 <footer>
     <p>
-        **This is just a fake portfolio. All the projects and contact details given
-        are not real.
+        **This is just a fake portfolio. 
     </p>
     <p>
         <!-- copy right symbol is &copy; -->
@@ -507,6 +521,9 @@ class="btn btn-show-all"
         <a href="https://www.freecodecamp.com/" target="_blank"
         >freeCodeCamp <i class="fab fa-free-code-camp"></i
             ></a> curriculum.
+        </p>
+        <p>
+            Images utilized from <a href="https://placeholder.com">Placeholder.com</a>
         </p>
     </footer>
 </body>

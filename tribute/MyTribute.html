@@ -5,7 +5,6 @@
         font-size: 1.6rem;
         line-height:1.5;
         text-align:center;
-        /* color:#333; */
         margin:0;
     }
     h1{
@@ -96,6 +95,32 @@
         font-weight: 800;
         text-transform:uppercase;
     }
+    /* Footer */
+    
+    footer {
+        font-family: inherit;
+        font-weight: 100;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1rem;
+        background: gainsboro;
+        border: 4px solid burlywood;
+    }
+    
+    footer > p {
+        margin: 1rem;
+    }
+    
+    footer i {
+        vertical-align: middle;
+    }
+    
+    @media (max-width: 28.75em) {
+        footer {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
 </style>
 
 
@@ -136,10 +161,18 @@
             over the British army was neutralised.
         </article>
         <br>
-        <article><strong>T</strong>he battle of Saragarhi is 
-            often compared to the battle of Thermopayle which took place
+        
+        <article><strong>S</strong>immilarities are always drawn between the battle of Saragarhi 
+            battle of Thermopayle which took place
             in 480 BC in which a group of 300 greek soldiers 
             faced the massive Persian army.
+            <p>
+                There have been movies made on both the battles.
+                The movie <strong>300</strong> made on battle of Thermopayle and movie <strong> Kesari</strong>
+                made on the battle of Saragarhi.
+                A series (21 Sarfarosh) was also released on National-Geographic channel on this famous battle.
+            </p>
+            
         </article>
         <br>
         <br>
@@ -148,6 +181,12 @@
             target="_blank"
             href="https://en.wikipedia.org/wiki/Battle_of_Saragarhi">Wikipedia</a></h3>
         </section>
-        <footer>Satyank</footer>
-        
-    </main>
+        <footer><p>
+            &copy Created as part of freecodecamp curriculum.
+        </p>
+        <p>
+            **Details of the battle sourced from wikepedia.
+        </p>
+    </footer>
+    
+</main>

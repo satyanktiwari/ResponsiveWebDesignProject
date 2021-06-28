@@ -5,192 +5,220 @@
         @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
         
         :root {
-  --color-white: #f3f3f3;
-  --color-darkblue: #1b1b32;
-  --color-darkPurple-alpha:rgba(11, 10, 14, 0.5);
-  --color-my-yellow:rgba(245, 189, 31, 0.9);
-  --color-my-red:rgba(200, 0, 0, 0.9);
-  --color-black-alpha:rgba(0, 0, 0, 0.5);
-  --color-grey-blue:#495057;
-  --color-light-sky-blue:#76b1ff;
-  --color-dark-sky-blue-alpha:rgba(66, 147, 255, 0.50);
-  --color-yellow-black:#190e00;
-  }
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+            --color-white: #f3f3f3;
+            --color-darkblue: #1b1b32;
+            --color-darkPurple-alpha:rgba(11, 10, 14, 0.5);
+            --color-my-yellow:rgba(245, 189, 31, 0.9);
+            --color-my-red:rgba(200, 0, 0, 0.9);
+            --color-black-alpha:rgba(0, 0, 0, 0.5);
+            --color-grey-blue:#495057;
+            --color-light-sky-blue:#76b1ff;
+            --color-dark-sky-blue-alpha:rgba(66, 147, 255, 0.50);
+            --color-yellow-black:#190e00;
+        }
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
         
         body {
-  font-family: 'Roboto',sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.4;
-  color: var(--color-white);
-  margin: 0;
-}
-
-    /* fileurl:
-    https://upload.wikimedia.org/wikipedia/commons/1/10/HTTP_logo_-_2014.svg
-IETF HTTP Working Group (HTTPbis), Public domain, via Wikimedia Commons */
-
-   body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  background: var(--color-darkblue);
-  background-image: linear-gradient(
-      5deg,
-      var(--color-my-yellow),
-      var(--color-my-red)
-    ),
-    url(
+            font-family: 'Roboto',sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.4;
+            color: var(--color-white);
+            margin: 0;
+        }
+        
+        /* fileurl:
         https://upload.wikimedia.org/wikipedia/commons/1/10/HTTP_logo_-_2014.svg
-        );
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-         
-h1 {
+        IETF HTTP Working Group (HTTPbis), Public domain, via Wikimedia Commons */
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background: var(--color-darkblue);
+            background-image: linear-gradient(
+            5deg,
+            var(--color-my-yellow),
+            var(--color-my-red)
+            ),
+            url(
+            https://upload.wikimedia.org/wikipedia/commons/1/10/HTTP_logo_-_2014.svg
+            );
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        h1 {
             color: var(--color-white);
             font-weight: 400;
             line-height: 1.2;
         } 
-    
-   p {
-       font-size: 1.125rem;
-   } 
-    
-   h1,
-    p {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-
-label {
-    display: flex;
-    align-items: center;
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-}
-
-input,
-button,
-select,
-textarea {
-    font-family: inherit;
-    font-size: initial;
-    line-height: inherit;
-    margin: 0;
-}
-
-button {
-    border: none;
-}
-
-.container {
-    width: 100%;
-    margin: 3.125rem auto 0 auto;
-}
-
-@media (min-width: 57.6rem){
-    .container{
-        max-width: 35.6rem;
-    }
-}
-    
-    @media (min-width:76.8rem) {
-        .container{
-            max-width:55rem;
+        
+        p {
+            font-size: 1.125rem;
+        } 
+        
+        h1,
+        p {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
         }
-    }
-    
-    .header {
-        padding: 0 0.625rem;
-        margin-bottom: 1.875rem;
-    }
-
-    .description {
-        font-style:italic;
-        font-weight: 200;
-        text-shadow: 1px 1px 1px var(--color-black-alpha);
-    }
-
-.text-center {
-    text-align: center;
-}
-
-form {
-  background: var(--color-darkPurple-alpha);
-  padding: 2.5rem 0.625rem;
-  border-radius: 0.25rem;
-}
-    
-@media (min-width: 480px) {
-  form {
-    padding: 2.5rem;
-  }
-}
-
-.form-group {
-  margin: 0 auto 1.25rem auto;
-  padding: 0.25rem;
-}
-
-.form-control {
-  display: block;
-  width: 100%;
-  height: 2.375rem;
-  padding: 0.375rem 0.75rem;
-  color: var(--color-grey-blue);
-  background-color: var(--color-white);
-  background-clip: padding-box;
-  border: 1px solid var(--color-grey-blue);
-  border-radius: 0.25rem;
-  transition: border-color 500ms ease-in-out, 
-                box-shadow 0.15s ease-in-out;
-}
-
-.form-control:focus {
-  border-color: var(--color-light-sky-blue);
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem var(--color-dark-sky-blue-alpha);
-}
-
-.input-radio,
-.input-checkbox {
-  display: inline-flex;
-  margin-right: 0.625rem;
-  min-height: 1.25rem;
-  min-width: 1.25rem;
-}
-
-.input-number {
-        min-width:10rem;
-    }
-
-.input-textarea {
-  min-height: 12rem;
-  width: 100%;
-  padding: 0.625rem;
-  resize: vertical;
-}
-
-.submit-button {
-  display: block;
-  width: 100%;
-  padding: 0.75rem;
-  background: var(--color-yellow-black);
-  color: inherit;
-  border-radius: 2px;
-  cursor: pointer;
-}
+        
+        label {
+            display: flex;
+            align-items: center;
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        input,
+        button,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: initial;
+            line-height: inherit;
+            margin: 0;
+        }
+        
+        button {
+            border: none;
+        }
+        
+        .container {
+            width: 100%;
+            margin: 3.125rem auto 0 auto;
+        }
+        
+        @media (min-width: 57.6rem){
+            .container{
+                max-width: 35.6rem;
+            }
+        }
+        
+        @media (min-width:76.8rem) {
+            .container{
+                max-width:55rem;
+            }
+        }
+        
+        .header {
+            padding: 0 0.625rem;
+            margin-bottom: 1.875rem;
+        }
+        
+        .description {
+            font-style:italic;
+            font-weight: 200;
+            text-shadow: 1px 1px 1px var(--color-black-alpha);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        form {
+            background: var(--color-darkPurple-alpha);
+            padding: 2.5rem 0.625rem;
+            border-radius: 0.25rem;
+        }
+        
+        @media (min-width: 480px) {
+            form {
+                padding: 2.5rem;
+            }
+        }
+        
+        .form-group {
+            margin: 0 auto 1.25rem auto;
+            padding: 0.25rem;
+        }
+        
+        .form-control {
+            display: block;
+            width: 100%;
+            height: 2.375rem;
+            padding: 0.375rem 0.75rem;
+            color: var(--color-grey-blue);
+            background-color: var(--color-white);
+            background-clip: padding-box;
+            border: 1px solid var(--color-grey-blue);
+            border-radius: 0.25rem;
+            transition: border-color 500ms ease-in-out, 
+            box-shadow 0.15s ease-in-out;
+        }
+        
+        .form-control:focus {
+            border-color: var(--color-light-sky-blue);
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem var(--color-dark-sky-blue-alpha);
+        }
+        
+        .input-radio,
+        .input-checkbox {
+            display: inline-flex;
+            margin-right: 0.625rem;
+            min-height: 1.25rem;
+            min-width: 1.25rem;
+        }
+        
+        .input-number {
+            min-width:10rem;
+        }
+        
+        .input-textarea {
+            min-height: 12rem;
+            width: 100%;
+            padding: 0.625rem;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background: var(--color-yellow-black);
+            color: inherit;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        
+        /* Footer */
+        
+        footer {
+            font-family: inherit;
+            font-weight: 100;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 0.5rem;
+            background: var(--color-black-alpha);
+            border-top: 4px solid var(--color-my-red);
+        }
+        
+        footer > p {
+            margin: 1rem;
+            font-size: 1rem;
+        }
+        
+        footer i {
+            vertical-align: middle;
+        }
+        
+        @media (max-width: 28.75em) {
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
     </style>    
     
     
@@ -201,59 +229,59 @@ form {
 <body>
     <main>
         <div class="container">
-        <header class="header text-center">
-            <h1 id="title">
-                API Testing Tools - Survey Form
-            </h1>
-            <p id="description" class="description text-center" >
-                Please help us in understanding about 
-                tools in api testing
-            </p>
-        </header>
-       <form id="survey-form">
-           <div class="form-group">
-               <label id="name-label" for="name">Name</label>
-               <input 
-               type="text"
-               id="name" 
-               name="name"  
-               class="form-control"              
-               placeholder="Enter your Name"
-               required
-               >
-           </div>
-           <div class="form-group">
-               <label id="email-label" for="email">Email</label>
-               <input
-               type="email"
-               id="email"
-               name="email"  
-               class="form-control"
-               placeholder="Enter your Email"
-               required
-               >
-           </div>
-           <div class="form-group">
-              <label id="number-label" for="number">Years of Experience with Api Testing</label>
-               <input
-               type="number"
-               id="number"
-               name="number"
-               min=0
-               max=50
-               class ="form-control"
-               placeholder="Years"
-               class="input-number"
-               >
-           </div>
-
-           <div class="form-group">
-               <p>Which Api test tool / framework do you prefer?</p>
-               <select 
-               id="dropdown" 
-               name="tools"
-               class="form-control"
-               >
+            <header class="header text-center">
+                <h1 id="title">
+                    API Testing Tools - Survey Form
+                </h1>
+                <p id="description" class="description text-center" >
+                    Please help us in understanding about 
+                    tools in api testing
+                </p>
+            </header>
+            <form id="survey-form">
+                <div class="form-group">
+                    <label id="name-label" for="name">Name</label>
+                    <input 
+                    type="text"
+                    id="name" 
+                    name="name"  
+                    class="form-control"              
+                    placeholder="Enter your Name"
+                    required
+                    >
+                </div>
+                <div class="form-group">
+                    <label id="email-label" for="email">Email</label>
+                    <input
+                    type="email"
+                    id="email"
+                    name="email"  
+                    class="form-control"
+                    placeholder="Enter your Email"
+                    required
+                    >
+                </div>
+                <div class="form-group">
+                    <label id="number-label" for="number">Years of Experience with Api Testing</label>
+                    <input
+                    type="number"
+                    id="number"
+                    name="number"
+                    min=0
+                    max=50
+                    class ="form-control"
+                    placeholder="Years"
+                    class="input-number"
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <p>Which Api test tool / framework do you prefer?</p>
+                    <select 
+                    id="dropdown" 
+                    name="tools"
+                    class="form-control"
+                    >
                     <option disabled selected value>Select api testing tool</option>
                     <option value="Postman">Postman</option>
                     <option value="RestAssured">Rest Assured</option>
@@ -261,118 +289,126 @@ form {
                     <option value="horsesForCourses">Depends on Project</option>
                     <option value="preferNo">Prefer Not to Say</option>
                     <option value="other">Other</option>
-               </select>
-           </div>
-           
-           <div class="form-group">
-               <p>Would you like to try above tools?</p>
-               <label for="yes">
-                   <input
-                   name="user-feedback"
-                   id="yes"
-                   value="yes"
-                   type="radio"
-                   class="input-radio"
-                   checked
-                   >Yes
-               </label>
-               <label for="no">
-                   <input
-                   name="user-feedback"
-                   id="no"
-                   value="no"
-                   type="radio"
-                   class="input-radio"
-                   >No
-               </label>
-               <label for="noOther">
-                   <input
-                   name="user-feedback"
-                   id="noOther"
-                   value="noOther"
-                   type="radio"
-                   class="input-radio"
-                   >No - for the tool listed
-               </label>
-           </div>
-           <div class="form-group">
-               <p>Select all that apply when you test</p>
-               <label for="code">
-                   <input
-                   id="code"
-                   value="code"
-                   name="code"
-                   type="checkbox"
-                   class="input-checkbox"
-                   >Validate response code
-               </label>
-               <label for="responseJson">
-                   <input
-                id="responseJson"
-                value="responseJson" 
-                name="responseJson"
-                type="checkbox"
-                class="input-checkbox"
-                >Validate json response
-            </label>
-            <label for="responseXml">
-                <input
-                id="responseXml"
-                value="responseXml"
-                name="responseXml"
-                type="checkbox"
-                class="input-checkbox"
-                >Validate xml response
-            </label>
-            <label for="fuzzy">
-                <input
-                id="fuzzy"
-                value="fuzzy"
-                name="fuzzy"
-                type="checkbox"
-                class="input-checkbox"
-                >Assert using fuzzy matching
-            </label>
-            <label for="performance">
-                <input
-                id="performance"
-                value="performance"
-                name="performance"
-                type="checkbox"
-                class="input-checkbox"
-                >Performance test API's 
-            </label>
-            <label for="uiTesting">
-                <input
-                id="uiTesting"
-                value="uiTesting"
-                name="uiTesting"
-                type="checkbox"
-                class="input-checkbox"
-                >My API test tool can also be used for testing UI 
-            </label>
-           </div>
-          
-           <div class="form-group">
-               <p>Any comments or suggestions?</p>
-               <textarea
-               id="comments"
-               name="comments"
-               placeholder="Enter your comments here"
-               class="input-textarea form-control"
-               ></textarea>
-           </div>
-          
-           <div class="form-group">
-               <button
-               id="submit"
-               name="button-submit"
-               class="submit-button"
-               >Submit</button>
-           </div>           
-       </form> 
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <p>Would you like to try above tools?</p>
+                <label for="yes">
+                    <input
+                    name="user-feedback"
+                    id="yes"
+                    value="yes"
+                    type="radio"
+                    class="input-radio"
+                    checked
+                    >Yes
+                </label>
+                <label for="no">
+                    <input
+                    name="user-feedback"
+                    id="no"
+                    value="no"
+                    type="radio"
+                    class="input-radio"
+                    >No
+                </label>
+                <label for="noOther">
+                    <input
+                    name="user-feedback"
+                    id="noOther"
+                    value="noOther"
+                    type="radio"
+                    class="input-radio"
+                    >No - for the tool listed
+                </label>
+            </div>
+            <div class="form-group">
+                <p>Select all that apply when you test</p>
+                <label for="code">
+                    <input
+                    id="code"
+                    value="code"
+                    name="code"
+                    type="checkbox"
+                    class="input-checkbox"
+                    >Validate response code
+                </label>
+                <label for="responseJson">
+                    <input
+                    id="responseJson"
+                    value="responseJson" 
+                    name="responseJson"
+                    type="checkbox"
+                    class="input-checkbox"
+                    >Validate json response
+                </label>
+                <label for="responseXml">
+                    <input
+                    id="responseXml"
+                    value="responseXml"
+                    name="responseXml"
+                    type="checkbox"
+                    class="input-checkbox"
+                    >Validate xml response
+                </label>
+                <label for="fuzzy">
+                    <input
+                    id="fuzzy"
+                    value="fuzzy"
+                    name="fuzzy"
+                    type="checkbox"
+                    class="input-checkbox"
+                    >Assert using fuzzy matching
+                </label>
+                <label for="performance">
+                    <input
+                    id="performance"
+                    value="performance"
+                    name="performance"
+                    type="checkbox"
+                    class="input-checkbox"
+                    >Performance test API's 
+                </label>
+                <label for="uiTesting">
+                    <input
+                    id="uiTesting"
+                    value="uiTesting"
+                    name="uiTesting"
+                    type="checkbox"
+                    class="input-checkbox"
+                    >My API test tool can also be used for testing UI 
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <p>Any comments or suggestions?</p>
+                <textarea
+                id="comments"
+                name="comments"
+                placeholder="Enter your comments here"
+                class="input-textarea form-control"
+                ></textarea>
+            </div>
+            
+            <div class="form-group">
+                <button
+                id="submit"
+                name="button-submit"
+                class="submit-button"
+                >Submit</button>
+            </div>           
+        </form> 
     </div>      
-    </main>
-    <footer></footer>
+</main>
+
+<footer>
+    <p>
+        **Background image - Public domain, via Wikimedia Commons.
+    </p>
+    <p>
+        &copy Created as part of freecodecamp curriculum
+    </p>
+</footer>
 </body>
 </html>
